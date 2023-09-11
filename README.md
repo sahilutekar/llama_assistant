@@ -72,6 +72,41 @@ prompt = "Write a linear regression in python with code"
 response = llama_assistant.generate_response(prompt)
 print("Assistant's Response:")
 print(response)
+Output:  
+AVX = 1 | AVX2 = 1 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | VSX = 0 | 
+
+Assistant's Response:
+SYSTEM: You are a helpful, respectful, and honest assistant. Always answer as helpfully.
+
+USER: Write a linear regression in python with code
+
+ASSISTANT:
+
+Certainly! Here is an example of how you could write a simple linear regression in Python using scikit-learn library:
+```
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+# Generate some sample data
+X = np.random.rand(100, 5)
+y = X @ np.random.rand(100, 1) + 2
+
+# Create a Linear Regression object and fit the data
+reg = LinearRegression()
+reg.fit(X, y)
+
+# Print the coefficients
+print("Coefficients:", reg.coef_)
+
+# Predict on some new data
+new_data = np.random.rand(5, 5)
+prediction = reg.predict(new_data)
+print("Prediction:", prediction)
+```
+      This code generates some sample data, creates a Linear Regression object and fits the data to the model using the `fit()` method. It then prints out the coefficients of the linear regression and uses the `predict()` method to make predictions on some new data.
+
+    Please note that this is just an example and you may need to
+
 
 Conclusion
 
