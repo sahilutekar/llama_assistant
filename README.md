@@ -72,6 +72,8 @@ prompt = "Write a linear regression in python with code"
 response = llama_assistant.generate_response(prompt)
 print("Assistant's Response:")
 print(response)
+
+
 Output:
   
     AVX = 1 | AVX2 = 1 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | VSX = 0 | 
