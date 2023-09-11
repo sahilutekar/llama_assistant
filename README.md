@@ -14,7 +14,6 @@ Installation
 
 To install the required Python packages, you can use pip:
 
-bash
 
 pip install huggingface_hub
 pip install llama-cpp-python==0.1.78
@@ -27,7 +26,7 @@ To use the Llama Assistant, follow these steps:
 
     Run the script using the following command:
 
-bash
+
 
 python llama_assistant.py
 
