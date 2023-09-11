@@ -40,27 +40,47 @@ Configuration
 
 The script provides options for configuring the behavior of the Llama Assistant. You can adjust the following parameters in the code:
 
-    model_name_or_path: Set the name or path of the Llama model you want to use.
+   Parameters in the LlamaAssistant Class:
 
-    model_basename: Specify the base filename of the Llama model.
+    model_name_or_path:
+        This parameter represents the name or path of the Llama model that you want to use. It specifies the location or identifier of the model to be downloaded or loaded.
 
-    n_threads: Control the number of CPU threads used for processing.
+    model_basename:
+        The model_basename parameter specifies the base filename of the Llama model. It's used in conjunction with model_name_or_path to determine the exact location of the model files.
 
-    n_batch: Set the batch size for model interactions.
+    n_threads (Optional, Default: 2):
+        n_threads determines the number of CPU threads that will be used for processing. It controls the parallelism of CPU operations when interacting with the model.
 
-    n_gpu_layers: Specify the number of GPU layers to use when interacting with the model.
+    n_batch (Optional, Default: 512):
+        n_batch sets the batch size for model interactions. It determines how many text sequences or prompts can be processed simultaneously. A larger batch size may lead to increased memory usage.
 
-    max_tokens: Limit the maximum number of tokens in the generated response.
+    n_gpu_layers (Optional, Default: 32):
+        n_gpu_layers specifies the number of GPU layers to be used when interacting with the model. The choice of this parameter may depend on your specific model and the available GPU memory.
 
-    temperature: Adjust the randomness of the model's responses.
+Parameters in the generate_response Method:
 
-    top_p: Control the diversity of the response by limiting the generation to top cumulative probability tokens.
+    prompt:
+        The prompt parameter is the user's input or query that you want the Llama model to generate a response to. It should be a text string.
 
-    repeat_penalty: Penalize repeated phrases or words in the response.
+    max_tokens (Optional, Default: 256):
+        max_tokens determines the maximum number of tokens (words or characters) in the generated response. If you set it to a higher value, the response can be longer.
 
-    top_k: Limit the number of tokens considered for text generation.
+    temperature (Optional, Default: 0.5):
+        The temperature parameter controls the randomness of the model's responses. Higher values (e.g., 1.0) make responses more random, while lower values (e.g., 0.2) make them more focused and deterministic.
 
-    echo: Print the generated response to the console.
+    top_p (Optional, Default: 0.95):
+        top_p is a parameter that controls the diversity of the response. It limits the generation to the top cumulative probability tokens. Higher values allow more diversity in the responses.
+
+    repeat_penalty (Optional, Default: 1.2):
+        repeat_penalty is used to penalize repeated phrases or words in the response. It makes it less likely for the model to repeat itself in the generated text.
+
+    top_k (Optional, Default: 150):
+        top_k limits the number of tokens to consider for each step of text generation. It helps in constraining the vocabulary size and can be used to control the quality of responses.
+
+    echo (Optional, Default: True):
+        The echo parameter, when set to True, will print the generated response to the console or log, allowing you to see the response immediately.
+
+These parameters provide fine-grained control over how the Llama model generates responses to user prompts, allowing you to customize the behavior of the conversational AI assistant according to your specific requirements and preferences. Adjusting these parameters can influence the length, diversity, and quality of the generated responses.
 
 Example
 
