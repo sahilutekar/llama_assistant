@@ -24,11 +24,9 @@ To use the Llama Assistant, follow these steps:
 
     Clone the repository or download the Python script.
 
-    Run the script using the following command:
+    Run the script using the following command:python llama_assistant.py
 
 
-
-python llama_assistant.py
 
     The script will:
         Initialize the Llama Assistant with model parameters.
