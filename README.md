@@ -22,9 +22,9 @@ Usage
 
 To use the Llama Assistant, follow these steps:
 
-    Clone the repository or download the Python script.
+Clone the repository or download the Python script.
 
-    Run the script using the following command:python llama_assistant.py
+    Run the script using the following command  python llama_assistant.py
 
 
 
